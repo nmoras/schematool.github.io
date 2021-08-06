@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Schema Tool</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="./index.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h3 id="mainheader">LocalBusiness Schema</h3>
+        <div class="row">
+            <div class="col-6 formsection">
+                <form id="formone">
+                    <div class="form-group row">
+                        <div class="col">
+                            <label>Company Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Name" value="">
+                            <div role='alert' id='namealert' class='displayatb'>
+                                <p>The text goes here</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <label>Logo</label>
+                            <input type="text" id="img" class="form-control" placeholder="img URL" value="">
+                            <div id='imgalert' class='displayatb'>
+                                <p>The text goes here</p>
+                            </div>
+                        </div>
+                    
+                        <div class="col">
+                            <label></label>
+                            <input type="text" id="@id" class="form-control" placeholder="@id(URL)">
+                            <div id='idalert' class='displayatb'>
+                                <p>The text goes here</p>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="form-group row">
+                        
+                        <div class="col">
+                            <input type="text" id="url" class="form-control" placeholder="URL">
+                        </div>
+                        <div class="col">
+                            <input type="text" id="phone" class="form-control" placeholder="phone">
+                        </div>
+                        <div class="col">
+                            <input type="text" id="pricerange" class="form-control" placeholder="pricerange">
+                        </div>
+                    </div>
+                    <div class="form-group row"> 
+                        <div class="col">
+                            <textarea type="text" id="description" class="form-control" placeholder="description"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                            <div class="col-12">
+                                <label>Address</label>
+                            </div>
+                            <div class="col">
+                                <input type="text" id="street" class="form-control" placeholder="street">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="city" class="form-control" placeholder="city">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="postalcode" class="form-control" placeholder="zip code">
+                            </div>
+                    </div>
+                    <div class="form-group row">
+                            <div class="col">
+                                <input type="text" id="region" class="form-control" placeholder="State">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="country" class="form-control" placeholder="Country">
+                            </div>
+                            
+                    </div> 
+                    <div class="form-group row">
+                        <div class="col">
+                            <input type="text" id="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="col">
+                            <input type="text" id="telephone" class="form-control" placeholder="telephone">
+                        </div>
+                        
+                </div> 
+                </form>
+                <form id="formfour">
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>Geo Cordinates</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="latitude" class="form-control" placeholder="latitude">
+                        </div>
+                        <div class="col">
+                            <input type="text" id="longitude" class="form-control" placeholder="longitude">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col">
+                            <input type="text" id="hasmap" class="form-control" placeholder="Google map link">
+                        </div>
+                    </div>
+                </form>
+                <form id="formtwo">    
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <div class="btn">Add social profiles</div> 
+                        </div>  
+                        <div class="addprofile col-9">
+                            <div class="sm"><i class="fa fa-facebook-square btn"  id="facebook" disabled="false"></i></div>  
+                            <div class="sm"><i class="fa fa-twitter-square btn" id="twitter" value=""></i></div>  
+                            <div class="sm"><i class="fa fa-linkedin-square btn" id="linkedin" value=""></i></div>
+                            <div class="sm"><i class="fa fa-pinterest-square btn" id="pinterest" value=""></i></div>
+                            <div class="sm"><i class="fa fa-globe btn" id="url"></i></div>
+                            <div class="sm btn" id="custom">custom</i></div>
+                        </div>  
+                        <div class="col-12 smedia"></div>                
+                    </div> 
+                    
+                </form>
+                
+                <form id="formfour">
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>Aggregate Rating</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="agrrating" class="form-control" placeholder="Rating count">
+                        </div>
+                        <div class="col">
+                            <input type="text" id="agrvalue" class="form-control" placeholder="Rating value">
+                        </div>
+                        <div class="col">
+                            <input type="text" id="bestrating" class="form-control" placeholder="Best Rating">
+                        </div>
+                        <div class="col">
+                            <input type="text" id="worstrating" class="form-control" placeholder="Worst Rating">
+                        </div>
+                    </div>
+                </form>
+                <!-- <div>
+                    <button class='btn' onclick="myfunction(event);">click me</button>
+                </div> -->
+                
+            </div>
+            <div class="col-4 scriptsection" contenteditable="true">
+                <div>
+                    <span>&lt;script</span>
+                    <span class='pln'> </span>
+                    </span>type="application/ld+json"&gt;</span><br> 
+                    <span>{</span><br/>
+                    <span class='pln'> </span>
+                    <span class="str">"@context"</span>
+                    <span class="pun">:</span>
+                    <span class='pln'> </span>
+                    <span class="strprop">""</span>
+                    <span class="pun">,</span><br>
+                    <div class="localbusiness">
+                        
+                        <span class="str">"@type"</span>
+                        <span class="pun">:</span>
+                        <span class='pln'></span>
+                        <span class="strprop">"localBusiness"</span>
+                        <span class="pun">,</span>
+                </div>
+                <div class='localbusiness'>
+                        <span lass="str">"name"</span>
+                        <span class="pun">:</span>
+                        <span class='pln'> </span>
+                        <span id="namestr">""</span>
+                        <span class="pun">,</span><br>
+                </div>
+                <div>
+                        <span class="str">"image"</span>
+                        <span class="pun">:</span>
+                        <span class='pln'> </span>
+                        <span id="imgstr">""</span>
+                        <span class="pun">,</span><br>
+                </div>
+                <div>
+                        <span lass="str">"@id"</span>
+                        <span class="pun">:</span>
+                        <span class='pln'> </span>
+                        <span id="@idstr">""</span>
+                        <span class="pun">,</span><br>
+                </div>
+                <div>
+                        <span>"url"</span>
+                        <span class="pun">:</span>
+                        <span class='pln'> </span>
+                        <span id="urlstr">""</span>
+                        <span class="pun">,</span><br>
+                </div>  
+                <div>
+                        <span class="str"> "telephone"</span>
+                        <span class="pun">:</span>
+                        <span class='pln'> </span>
+                        <span id="phonestr">""</span>
+                        <span class="pun">,</span><br>
+                    </div>
+                    <div>
+
+                    </div>
+                    <div id='postaadd'>
+                        <span class="str">"PostalAddress"</span>
+                        <span class="pun">:</span>
+                        <span>{</span><br>
+                        <span class='pln'>&nbsp&nbsp</span>
+                        <span class="str">"streetAdress"</span>
+                        <span class="pun">:</span>
+                        <span class='pln'> </span>
+                        <span id="streetstr">""</span>
+                        <span class="pun">,</span><br>
+                        <span class='pln'> </span>
+                        <span class='pln'>&nbsp&nbsp</span>
+                        <span class="str">"addressLocality"</span>
+                        <span class="pun">:</span>
+                        <span class='pln'> </span>
+                        <span id="citystr">" "</span>
+                        <span class="pun">,</span><br>
+                        <span class='pln'>&nbsp&nbsp</span>
+                        <span class="str">"addressRegion"</span>
+                        <span class="pun">:</span>
+                        <span class='pln'> </span>
+                        <span id="regionstr">" "</span>
+                        <span class="pun">,</span><br>
+                        <span class='pln'>&nbsp&nbsp</span>
+                        <span class="str">"postalCode"</span>
+                        <span class="pun">:</span>
+                        <span class='pln'> </span>
+                        <span id="postalcode">" "</span>
+                        <span class="pun">,</span><br>
+                        <span class='pln'>&nbsp&nbsp</span>
+                        <span class="str">"addressCountry"</span>
+                        <span class="pun">:</span>
+                        <span class='pln'> </span>
+                        <span id="countrystr">" "</span><br>
+                        <span>}</span>
+                        <span class="pun">,</span><br>
+                    </div>
+                    
+                    
+
+
+                    <span>&lt;/script&gt;</span><br/>
+                </div>
+
+                <div>
+
+                </div>
+        </div>
+
+
+        </div>
+    
+    </div> 
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>

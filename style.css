@@ -1,0 +1,33 @@
+.displayatb{
+    display:none;
+}
+.afterfocus {
+    display: block;
+  }
+span{
+    margin-top: 3px;
+    display: inline-block;
+}  
+.scriptsection{
+    border: 2px solid blue;
+    height: 90vh;
+}
+.btn{
+    background-color: burlywood;
+}
+.smedialink{
+    display: block;
+    margin-top: 2px;
+}
+.addprofile{
+    display: inline-block;
+}
+.sm{
+    display:inline-block;
+}
+.sameasprop{
+    display: none;
+}
+.sameasarr{
+    display: none;
+}
