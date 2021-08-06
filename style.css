@@ -10,7 +10,7 @@ span{
 }  
 .scriptsection{
     border: 2px solid blue;
-    height: 90vh;
+    min-height: 100vh;
 }
 .btn{
     background-color: burlywood;
