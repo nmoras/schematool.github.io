@@ -9,8 +9,10 @@ span{
     display: inline-block;
 }  
 .scriptsection{
-    border: 2px solid blue;
-    min-height: 100vh;
+    border: 2px solid maroon;
+   height: 100vh;
+    background-color: bisque;
+    overflow-y: scroll;
 }
 .btn{
     background-color: burlywood;

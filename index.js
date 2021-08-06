@@ -7,22 +7,28 @@ window.onload=function(){
     let formtwoEl = document.getElementById('formtwo');
     formtwoEl.addEventListener('keyup', sameAsClickFn)
 
-    let formthreeEl = document.getElementById('formtwo')
+    let formthreeEl = document.getElementById('formthree')
     formthreeEl.addEventListener('keyup', myClickFn)
 
     let formfourEl = document.getElementById('formfour')
     formfourEl.addEventListener('keyup', myClickFn)
+
+    document.getElementById('schemafield').addEventListener('focusin', (e) => { schemaFocusFn(e)})
     let smArr = [];
  
 
+    function schemaFocusFn(x){
+        console.log('i am checked')
+        x.style.background = "yellow"
+    }
     //show alert msg
     function myFocusFn(e) {
         //console.log(e)
-        e.preventDefault();
-        let childEl = document.getElementById(e.target.id);
-        let NextSibling = childEl.nextElementSibling.id;
-        let alertText = document.getElementById(NextSibling);
-        alertText.classList.add("afterfocus")
+        // e.preventDefault();
+        // let childEl = document.getElementById(e.target.id);
+        // //let NextSibling = childEl.nextElementSibling.id;
+        // let alertText = document.getElementById(NextSibling);
+        // alertText.classList.add("afterfocus")
     } 
 
     //hide alert msg 
@@ -37,13 +43,14 @@ window.onload=function(){
     //
     function myClickFn(e){
         //console.log('e')
-        let childEl = document.getElementById(e.target.id)
+        let childEl = e.target.id
         const valueEl = document.getElementById(e.target.id).value;
         //console.log(valueEl)
-        const createIdElement = (childEl.id + 'str').toString();
-        //console.log(createIdElement)
-
+        const createIdElement = (childEl + 'str').toString();
+       
        document.getElementById(`${createIdElement}`).textContent =  '\"' + valueEl + '\"';
+       document.getElementById(`${createIdElement}`).style.backgroundColor = 'yellow';
+
     }
 
     function addProfile(e) {
