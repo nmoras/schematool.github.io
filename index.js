@@ -6,6 +6,12 @@ window.onload=function(){
     document.querySelector('.addprofile').addEventListener('click', addProfile, true)
     let formtwoEl = document.getElementById('formtwo');
     formtwoEl.addEventListener('keyup', sameAsClickFn)
+
+    let formthreeEl = document.getElementById('formtwo')
+    formthreeEl.addEventListener('keyup', myClickFn)
+
+    let formfourEl = document.getElementById('formfour')
+    formfourEl.addEventListener('keyup', myClickFn)
     let smArr = [];
  
 
