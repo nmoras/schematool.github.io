@@ -65,8 +65,8 @@ window.onload=function(){
         let inputId = e.target.id;
         let valuesArr = smArr.map(x => Object.values(x)[0]);
 
-        //disable the sm button after one click
-        document.getElementById(`${inputId}`).disabled=true;
+        // //disable the sm button after one click
+        // document.getElementById(`${inputId}`).disabled=true;
         
 
         //array to create sameAs div on the schema
@@ -139,8 +139,8 @@ window.onload=function(){
         //for a single sameAs 
         if(smArr.length === 1){
             //get the id from the schema sameAs property value
-        let sameAsStrId = (e.target.id+'str').toString();
-        let childEl = document.getElementById(sameAsStrId)     
+        //let sameAsStrId = (e.target.id+'str').toString();
+        let childEl = document.getElementById('firstval')     
         childEl.textContent =  '\"' + valueEl + '\"';
         }
 
@@ -159,7 +159,7 @@ window.onload=function(){
                 <span class="str">"sameAs"</span>
                 <span class="pun">:</span>
                 <span class='pln'> </span>
-                <span id="${idKey}idstr">" "</span>
+                <span id="firstval">" "</span>
                 </div><br>`);
   
     }
