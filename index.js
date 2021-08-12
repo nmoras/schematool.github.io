@@ -184,7 +184,7 @@ window.onload=function(){
                 <div id="sameArr">` +
                 smArr.map( x => {
                    return `&nbsp&nbsp<span class="${x.key}id">"${x.value}"</span><br>`
-                }) +
+                }).join('') +
                 `</div>
                 <span>]</span><br>
                 </div><br>`); 
