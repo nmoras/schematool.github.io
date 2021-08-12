@@ -73,12 +73,12 @@ window.onload=function(){
         
         //console.log(smArr)
         if (smArr.length === 1){
-            console.log('i am checked 12 August')
+            //console.log('i am checked 12 August')
             addSameAsProp();
         }
         if(smArr.length > 1 ){
-            console
             console.log('i am checked 12 August')
+            addSameAsArr()
         } else if(smArr.length > 1 && valuesArr[0]){
             console.log(valuesArr[0])
             addSameAsPropVal(e);
