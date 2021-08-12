@@ -181,11 +181,12 @@ window.onload=function(){
                 <span class="pun">:</span>
                 <span class='pln'> </span>
                 <span id="arr">[</span><br>
-                <div id="sameArr">` +
-                smArr.map( x => {
+                <div id="sameArr">
+                ${
+                    smArr.map( x => {
                    return `&nbsp&nbsp<span class="${x.key}id">"${x.value}"</span><br>`
-                }).join('') +
-                `</div>
+                }).join('')}
+                </div>
                 <span>]</span><br>
                 </div><br>`); 
     }
