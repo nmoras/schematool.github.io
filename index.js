@@ -63,8 +63,6 @@ window.onload=function(){
     function addProfile(e) {
         e.preventDefault();
         let inputId = e.target.id;
-        let valuesArr = smArr.map(x => Object.values(x)[0]);
-
         // //disable the sm button after one click
         // document.getElementById(`${inputId}`).disabled=true;
         
@@ -75,10 +73,12 @@ window.onload=function(){
         
         //console.log(smArr)
         if (smArr.length === 1){
+            console.log('i am checked 12 August')
             addSameAsProp();
         }
-        if(smArr.length > 1 && !valuesArr[0] ){
-            addSameAsArr();
+        if(smArr.length > 1 ){
+            console
+            console.log('i am checked 12 August')
         } else if(smArr.length > 1 && valuesArr[0]){
             console.log(valuesArr[0])
             addSameAsPropVal(e);
@@ -151,7 +151,8 @@ window.onload=function(){
 }
 
     function addSameAsProp(){
-        let idKey = smArr.map(x => Object.keys(x)[0]);
+        console.log('i am called 12 aug')
+        //let idKey = smArr.map(x => Object.keys(x)[0]);
         let postalAddressProp = document.getElementById('postaadd');
         postalAddressProp.insertAdjacentHTML("afterend",
                 `
@@ -185,7 +186,7 @@ window.onload=function(){
                 ${
                     smArr.map( x => {
                    return `&nbsp&nbsp<span class="${x.key}id">"${x.value}"</span><br>`
-                }).join('')}
+                }).join(' ')}
                 </div>
                 <span>]</span><br>
                 </div>`); 
