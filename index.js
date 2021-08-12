@@ -146,14 +146,7 @@ window.onload=function(){
 
         //for array of sameAs
         if(smArr.length > 1 ){
-            let printArray = smArr.map(x => Object.values(x)[0]);
-            let sameAsId = (e.target.id).toString();
-            //console.log(sameAsId)
-                let childEl = document.querySelector(`.${sameAsId}`)
-            console.log(`${sameAsId}`)
-            childEl.textContent =  '\"' + valueEl + '\"';
-        }
-        
+            addSameAsArr()       
     }  
 
     function addSameAsProp(){
@@ -170,32 +163,7 @@ window.onload=function(){
   
     }
 
-    function addSameAsArr(){
-        //remove child el when sameAs array length more than 1
-        let parentEl = document.getElementById('sameas')
-        removeAllChildNodes(parentEl)
-        parentEl.remove()
-
-        //get the key array
-        let idKey = smArr.map(x => Object.keys(x)[0]);
-        console.log(idKey)
-
-        let postalAddressProp = document.getElementById('postaadd');
-        postalAddressProp.insertAdjacentHTML("afterend",
-                `<div id='sameas'> 
-                <span class="str">"sameAs"</span>
-                <span class="pun">:</span>
-                <span class='pln'> </span>
-                <span id="arr">[</span><br>
-                <div id="sameArr">` +
-                idKey.map( x => {
-                   return `&nbsp&nbsp<span class="${x}id">" "</span><br>`
-                }) +
-                `</div>
-                <span>]</span><br>
-                </div><br>`); 
-    }
-
+ 
     function addSameAsPropVal(e){
         console.log('i am checked')
         let idKey = smArr.map(x => Object.keys(x)[0]);
