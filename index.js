@@ -86,42 +86,42 @@ window.onload=function(){
 
         
         //create input for social media
-        let input = document.createElement("input")
-        input.setAttribute('type', 'text')
-        input.setAttribute('id', `${inputId}id` )
-        input.setAttribute('placeholder', `${inputId}`)
-        input.setAttribute('class', 'smedialink form-control')
+        // let input = document.createElement("input")
+        // input.setAttribute('type', 'text')
+        // input.setAttribute('id', `${inputId}id` )
+        // input.setAttribute('placeholder', `${inputId}`)
+        // input.setAttribute('class', 'smedialink form-control')
 
-        //create delete btn 
-        let delBtn = document.createElement('button')
-        delBtn.setAttribute('id', `delbtn ${inputId}`)
-        delBtn.addEventListener('click', (e) => { e.preventDefault(); deleteSocialMediaEl(e) }, false)
-        delBtn.innerHTML= 'X';
+        // //create delete btn 
+        // let delBtn = document.createElement('button')
+        // delBtn.setAttribute('id', `delbtn ${inputId}`)
+        // delBtn.addEventListener('click', (e) => { e.preventDefault(); deleteSocialMediaEl(e) }, false)
+        // delBtn.innerHTML= 'X';
 
 
-        //Append
-        let parent = document.querySelector('.smedia')
-        parent.appendChild(input)
-        parent.appendChild(delBtn)
+        // //Append
+        // let parent = document.querySelector('.smedia')
+        // parent.appendChild(input)
+        // parent.appendChild(delBtn)
 
-        //delete social media
-        function deleteSocialMediaEl(e){
-            let idEl = e.target.id;
-            e.stopPropagation();
-            e.preventDefault();
+        // //delete social media
+        // function deleteSocialMediaEl(e){
+        //     let idEl = e.target.id;
+        //     e.stopPropagation();
+        //     e.preventDefault();
 
-            //remove delete and its sibling sm
-            document.getElementById(idEl).previousElementSibling.remove();
-            document.getElementById(idEl).remove();
+        //     //remove delete and its sibling sm
+        //     document.getElementById(idEl).previousElementSibling.remove();
+        //     document.getElementById(idEl).remove();
 
-            //filter the deleted sm from array   
-            let unshiftEl = idEl.trim().split(' ')
-            //console.log(unshiftEl)
-            let indexEl = smArr.indexOf(unshiftEl[1])
-            smArr.splice(indexEl, 1)
-            //console.log(smArr)
+        //     //filter the deleted sm from array   
+        //     let unshiftEl = idEl.trim().split(' ')
+        //     //console.log(unshiftEl)
+        //     let indexEl = smArr.indexOf(unshiftEl[1])
+        //     smArr.splice(indexEl, 1)
+        //     //console.log(smArr)
 
-        }  
+        // }  
     }
 
     //add sameAs Click fn to add value to the schema
