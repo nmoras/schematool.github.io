@@ -148,6 +148,7 @@ window.onload=function(){
         if(smArr.length > 1 ){
             addSameAsArr()       
     }  
+}
 
     function addSameAsProp(){
         let idKey = smArr.map(x => Object.keys(x)[0]);
@@ -161,6 +162,32 @@ window.onload=function(){
                 <span id="${idKey}idstr">" "</span>
                 </div><br>`);
   
+    }
+
+    function addSameAsArr(){
+        //remove child el when sameAs array length more than 1
+        let parentEl = document.getElementById('sameas')
+        removeAllChildNodes(parentEl)
+        parentEl.remove()
+
+        //get the key array
+        let idKey = smArr.map(x => Object.keys(x)[0]);
+        console.log(idKey)
+
+        let postalAddressProp = document.getElementById('postaadd');
+        postalAddressProp.insertAdjacentHTML("afterend",
+                `<div id='sameas'> 
+                <span class="str">"sameAs"</span>
+                <span class="pun">:</span>
+                <span class='pln'> </span>
+                <span id="arr">[</span><br>
+                <div id="sameArr">` +
+                smArr.map( x => {
+                   return `&nbsp&nbsp<span class="${x.key}id">"${x.value}"</span><br>`
+                }) +
+                `</div>
+                <span>]</span><br>
+                </div><br>`); 
     }
 
  
@@ -212,5 +239,5 @@ window.onload=function(){
             parent.removeChild(parent.firstChild);
         }
     }
-    }
+    
 }
