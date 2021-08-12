@@ -212,10 +212,5 @@ window.onload=function(){
             parent.removeChild(parent.firstChild);
         }
     }
+    }
 }
-
-
-
-
- 
-
