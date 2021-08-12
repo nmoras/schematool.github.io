@@ -4,6 +4,7 @@ window.onload=function(){
     document.getElementById('formone').addEventListener('focusout', myBlurFn)
     document.getElementById('formone').addEventListener('keyup', myClickFn)
     document.querySelector('.addprofile').addEventListener('click', addProfile, true)
+    
     let formtwoEl = document.getElementById('formtwo');
     formtwoEl.addEventListener('keyup', sameAsClickFn)
 
@@ -12,6 +13,12 @@ window.onload=function(){
 
     let formfourEl = document.getElementById('formfour')
     formfourEl.addEventListener('keyup', myClickFn)
+
+    //var related to sm test function
+    let testEl = document.getElementById('test')
+    testEl.addEventListener('click', myTestFn)
+
+    let sameAsEl = document.getElementById('tsma')
 
     document.getElementById('schemafield').addEventListener('focusin', (e) => { schemaFocusFn(e)})
     let smArr = [];
@@ -200,6 +207,34 @@ window.onload=function(){
 
         let div = document.getElementById('sameArr') 
         div.appendChild(spanEl)
+
+    }
+
+    //sameas profile text area
+    function myTestFn(e){
+        e.preventDefault();
+        let sameArrEl = document.getElementById('sameas')
+        if(sameArrEl){
+            sameArrEl.remove();
+        }
+        let textArr = [];
+        let textEl = sameAsEl.value.split(/\r|\n/);
+        console.log(textEl)
+
+        let postalAddressProp = document.getElementById('postaadd');
+        postalAddressProp.insertAdjacentHTML("afterend",
+                `<div id='sameas'> 
+                <span class="str">"sameAs"</span>
+                <span class="pun">:</span>
+                <span class='pln'> </span>
+                <span id="arr">[</span><br>
+                <div id="sameArr">` +
+                textEl.map( x => {
+                   return `<span>"${x}",</span><br>`
+                }) +
+                `</div>
+                <span>]</span><br>
+                </div><br>`); 
 
     }
 
