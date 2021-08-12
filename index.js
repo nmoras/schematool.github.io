@@ -188,7 +188,7 @@ window.onload=function(){
                 }).join('')}
                 </div>
                 <span>]</span><br>
-                </div><br>`); 
+                </div>`); 
     }
 
  
