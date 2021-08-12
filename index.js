@@ -140,8 +140,8 @@ window.onload=function(){
         if(smArr.length === 1){
             //get the id from the schema sameAs property value
         //let sameAsStrId = (e.target.id+'str').toString();
-        let childEl = document.getElementById('firstval')     
-        childEl.textContent =  '\"' + valueEl + '\"';
+        //let childEl = document.getElementById('firstval')     
+        //childEl.textContent =  '\"' + valueEl + '\"';
         }
 
         //for array of sameAs
