@@ -10,7 +10,7 @@ span{
 }  
 .scriptsection{
     border: 2px solid maroon;
-   height: 100vh;
+    height: 130vh;
     background-color: bisque;
     overflow-y: scroll;
 }

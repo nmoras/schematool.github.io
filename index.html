@@ -12,6 +12,7 @@
 <body>
     <div class="container-fluid">
         <h3 id="mainheader">LocalBusiness Schema</h3>
+        <hr>
         <div class="row">
             <div class="col-6 formsection">
                 <form id="formone">
@@ -114,13 +115,11 @@
                             <label>Opening Hours</label> 
                         </div>  
                         <div class="col-12 openinghour">
-                            <textarea id="" rows="3" class="col-12" contenteditable="true" style="text-align: left;">
+                            <textarea id="hourText" rows="3" class="col-12" contenteditable="true" style="text-align: left;">
                                 Mo-Fr 09:00-17:00
                                 Sa 09:30-14:00
-                                Su 09:30-14:00
-                            </textarea>
-                            <div class="btn">Add</div> 
-
+                                Su 09:30-14:00</textarea>
+                            <button class="btn dateBtn">Add</button> 
                         </div>               
                     </div> 
                     
@@ -131,10 +130,11 @@
                             <label>Add social profiles</label> 
                         </div>  
                         <div class="col-12 addprofile">
-                            <textarea id="tsma" rows="7" class="col-12" placeholder="add company social profile & Wikipedia and Wikidata links"></textarea>
-                            <div class="btn">Add</div> 
-
-                        </div>               
+                            <textarea id="tsma" rows="7" class="col-12" placeholder="add company social profile & Wikipedia and Wikidata links. (One link per line)"></textarea>                        
+                        </div> 
+                        <div class="col-12">
+                            <button class="btn btnAdd">Add</button>  
+                        </div>              
                     </div> 
                     
                 </form>
@@ -163,7 +163,7 @@
                 </div> -->
                 
             </div>
-            <div class="col-4 scriptsection" contenteditable="true" id='schemafield'>
+            <div class="col-4 scriptsection" contenteditable="false" id='schemafield'>
                 <div>
                     <span>&lt;script</span>
                     <span class='pln'> </span>
@@ -220,13 +220,21 @@
                         <span class="str"> "telephone"</span>
                         <span class="pun">:</span>
                         <span class='pln'> </span>
-                        <span id="phonestr">""</span>
+                        <span id="telephonestr">""</span>
                         <span class="pun">,</span><br>
-                    </div>
+                </div>
+                <div>
+                    <span class='pln'>&emsp;&emsp;</span>
+                    <span class="str"> "email"</span>
+                    <span class="pun">:</span>
+                    <span class='pln'> </span>
+                    <span id="emailstr">""</span>
+                    <span class="pun">,</span><br>
+                </div>
                     <div>
 
                     </div>
-                    <div id='postaadd'>
+                    <div id='postAdd'>
                         <span class="str">"address"</span>
                         <span class="pun">:</span>
                         <span>{</span><br>
@@ -259,7 +267,7 @@
                         <span class="str">"postalCode"</span>
                         <span class="pun">:</span>
                         <span class='pln'> </span>
-                        <span id="postalcode">" "</span>
+                        <span id="postalcodestr">" "</span>
                         <span class="pun">,</span><br>
                         <span class='pln'>&emsp;&emsp;</span>
                         <span class="str">"addressCountry"</span>
@@ -293,7 +301,7 @@
                         <span>}</span>
                         <span class="pun">,</span><br>
                     </div>
-                    <div>
+                    <div id="hasmapSchema">
                         <span class="str">"hasMap"</span>
                         <span class="pun">:</span>
                         <span id="hasmapstr">" "</span>
@@ -332,7 +340,7 @@
                         <span class="pun">:</span>
                         <span class='pln'> </span>
                         <span id="worstratingstr">" "</span>
-                        <span class="pun">,</span><br>
+                        <span class="pun"></span><br>
                         <span>}</span>
                         <span class="pun">,</span><br>
                     </div>
