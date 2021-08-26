@@ -30,7 +30,7 @@ window.onload=function(){
  
     //change the color on the schema section to yellow
     function schemaFocusFn(x){
-        x.style.background = "purple"
+        x.style.background = "purple";
     }
     
     //
@@ -40,7 +40,7 @@ window.onload=function(){
         const createIdElement = (childEl + 'str').toString();
        
        document.getElementById(`${createIdElement}`).textContent =  '\"' + valueEl + '\"';
-       document.getElementById(`${createIdElement}`).style.backgroundColor = 'yellow';
+       document.getElementById(`${createIdElement}`).style.textDecoration = 'underline yellow';
 
     }
  
