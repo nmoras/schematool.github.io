@@ -30,7 +30,7 @@ window.onload=function(){
  
     //change the color on the schema section to yellow
     function schemaFocusFn(x){
-        x.style.background = "yellow"
+        x.style.background = "purple"
     }
     
     //
