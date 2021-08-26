@@ -40,7 +40,7 @@ window.onload=function(){
         const createIdElement = (childEl + 'str').toString();
        
        document.getElementById(`${createIdElement}`).textContent =  '\"' + valueEl + '\"';
-       document.getElementById(`${createIdElement}`).style.textDecoration = 'underline yellow';
+       document.getElementById(`${createIdElement}`).style.background = 'purple';
 
     }
  
