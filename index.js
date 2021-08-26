@@ -124,9 +124,6 @@ window.onload=function(){
                     `</div>
                     <span>],</span><br>
                     </div>`);  
-
-
-
     }
 
     
