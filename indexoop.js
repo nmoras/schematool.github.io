@@ -2,7 +2,8 @@
 
 (function() {
     document.addEventListener('DOMContentLoaded', function(){
-        //const schema = new Schema();
+        const schema = new Schema();
+        schema.events();
     });
 
     class Schema {
@@ -32,17 +33,19 @@
         }
 
         events = function(){
-            this.formoneEl.addEventListener('keyup', myClickFn);
-            this.formtwoEl.addEventListener('submit', myTestFn);
-            this.formthreeEl.addEventListener('keyup', myClickFn);
-            this.formfourEl.addEventListener('keyup', myClickFn);
-            this.formfiveEl.addEventListener('submit', addDateFn)
+            console.log(this)
+            this.formoneEl.addEventListener('keyup', this.myClickFn);
+            this.formtwoEl.addEventListener('submit', this.myTestFn);
+            this.formthreeEl.addEventListener('keyup', this.myClickFn);
+            this.formfourEl.addEventListener('keyup', this.myClickFn);
+            this.formfiveEl.addEventListener('submit', this.addDateFn)
 
         }
     }
 
     Schema.prototype.myClickFn = function(e) {
-        let childEl = e.target.id
+        console.log(this)
+        const childEl = e.target.id
         const valueEl = document.getElementById(e.target.id).value;
         const createIdElement = (childEl + 'str').toString();
     
@@ -52,6 +55,7 @@
     };
 
     Schema.prototype.myTestFn = function (e){
+        console.log(this)
         e.preventDefault();
         let btnAddEl = document.querySelector('.btnAdd')
 
