@@ -49,15 +49,15 @@
         const valueEl = document.getElementById(e.target.id).value;
         const createIdElement = (childEl + 'str').toString();
     
-    document.getElementById(`${createIdElement}`).textContent =  '\"' + valueEl + '\"';
-    document.getElementById(`${createIdElement}`).style.background = 'purple';
+        document.getElementById(`${createIdElement}`).textContent =  '\"' + valueEl + '\"';
+        document.getElementById(`${createIdElement}`).style.background = 'purple';
 
     };
 
     Schema.prototype.myTestFn = function (e){
         console.log(this)
         e.preventDefault();
-        let btnAddEl = document.querySelector('.btnAdd')
+        const btnAddEl = document.querySelector('.btnAdd')
 
         if( btnAddEl.textContent === 'Edit'){
             document.getElementById('tsma').disabled = false;
@@ -65,7 +65,7 @@
 
         } else {
 
-            let sameArrEl = document.getElementById('sameas')
+            const sameArrEl = document.getElementById('sameas')
 
             //everytime add is clicked delete the printed array, print the new array
             if(sameArrEl){
