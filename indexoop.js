@@ -7,10 +7,36 @@
 
     class Schema {
         constructor() {
+            //company details
+            this.formoneEl = document.getElementById('formone');
+
+            //Geo Cordinates
+            this.formthreeEl = document.getElementById('formthree');
+
+            //Aggragate rating
+            this.formfourEl = document.getElementById('formfour');
+
+            //formtwo sameas array
+            this.formtwoEl = document.getElementById('formtwo');
+
+            //the sameas array textarea id
+            this.sameAsEl = document.getElementById('tsma');
+
+            //hours array textarea id
+            this.hoursEl = document.getElementById('hourText')
+
+            //the formfive opening hours
+            this.formfiveEl = document.getElementById('formfive')
+
 
         }
 
         events = function(){
+            this.formoneEl.addEventListener('keyup', myClickFn);
+            this.formtwoEl.addEventListener('submit', myTestFn);
+            this.formthreeEl.addEventListener('keyup', myClickFn);
+            this.formfourEl.addEventListener('keyup', myClickFn);
+            this.formfiveEl.addEventListener('submit', addDateFn)
 
         }
     }
