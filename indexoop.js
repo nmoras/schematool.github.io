@@ -22,6 +22,7 @@
 
             //the sameas array textarea id
             this.sameAsEl = document.getElementById('tsma');
+            console.log(this.sameAsEl)
 
             //hours array textarea id
             this.hoursEl = document.getElementById('hourText')
@@ -78,7 +79,7 @@
             //disable the textarea once the array is added
             document.getElementById('tsma').disabled = true;
 
-            let textEl = sameAsEl.value.split(/\r|\n/);
+            const textEl = document.getElementById('tsma').value.split(/\r|\n/);
 
             let postalAddressProp = document.getElementById('postAdd');
             postalAddressProp.insertAdjacentHTML("afterend",
