@@ -26,6 +26,7 @@
 
             //hours array textarea id
             this.hoursEl = document.getElementById('hourText')
+            
 
             //the formfive opening hours
             this.formfiveEl = document.getElementById('formfive')
@@ -113,7 +114,7 @@
             dateArrEl.remove();
         }
 
-        let textEl = hoursEl.value.split(/\r|\n/);
+        let textEl = document.getElementById('hourText').value.split(/\r|\n/);
         console.log(textEl)
 
             let postalAddressProp = document.getElementById('hasmapSchema');
